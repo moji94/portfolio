@@ -1,11 +1,11 @@
 import React from 'react'
-import { Layout } from '@components'
+import { Layout, Top } from '@components'
 
 export default function Home() {
   return (
     <Layout title="My Portfolio">
       <div>
-        <p>سلام دنیا</p>
+        <Top />
       </div>
     </Layout>
   )

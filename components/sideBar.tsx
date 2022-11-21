@@ -38,6 +38,8 @@ export const SideBar = (): JSX.Element => {
 const Container = styled.div`
   width: 105px;
   height: 100vh;
+  position: fixed;
+  left: 0;
   color: #ccc;
   transition: all 500ms;
   float: left;
@@ -71,7 +73,8 @@ const SingleItem = styled.li<any>`
   border-radius: 5px;
   justify-content: space-around;
   align-items: center;
-  transition: all 500ms;
+  margin-top: 10px;
+  transition: all 800ms;
   :hover {
     background-color: rgba(102, 140, 194, 0.5);
     box-shadow: 2px 2px 2px 2px rgba(39, 61, 93, 0.3);
