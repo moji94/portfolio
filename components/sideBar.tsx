@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Home, About, Skills, Work, Contact } from '@components'
 
 export const SideBar = (): JSX.Element => {
   return (
@@ -10,20 +11,24 @@ export const SideBar = (): JSX.Element => {
 
       <Items>
         <SingleItem>
-          <h5>Hello </h5>
-          <p className="pp"> world</p>
+          <Home />
+          <p className="pp">HOME </p>
         </SingleItem>
         <SingleItem>
-          <h5>Hello </h5> <p className="pp"> mojy</p>
+          <About />
+          <p className="pp">ABOUT </p>
         </SingleItem>
         <SingleItem>
-          <h5>Hello </h5> <p className="pp"> lollo</p>
+          <Skills />
+          <p className="pp"> SKILLS </p>
         </SingleItem>
         <SingleItem>
-          <h5>Hello </h5> <p className="pp"> bahba</p>
+          <Work />
+          <p className="pp">WORK </p>
         </SingleItem>
         <SingleItem>
-          <h5>Hello</h5> <p className="pp"> james</p>
+          <Contact />
+          <p className="pp">CONTACT</p>
         </SingleItem>
       </Items>
     </Container>
@@ -49,23 +54,22 @@ const Items = styled.ul`
   width: 100%;
   height: 85vh;
   background-color: #4169e1;
-  padding-left: 20px;
   flex-direction: column;
+  padding-left: 20px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   list-style-type: none;
 `
 const SingleItem = styled.li<any>`
-  width: 150px;
+  width: 175px;
   height: 50px;
   display: flex;
   flex-direction: row;
   color: #ccc;
   font-size: 20px;
-  margin: 10px;
   border-radius: 5px;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   transition: all 500ms;
   :hover {
