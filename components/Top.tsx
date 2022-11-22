@@ -1,5 +1,4 @@
-import React from 'react'
-import Image from 'next/image'
+import Reacts from 'react'
 import styled from 'styled-components'
 
 export const Top = (): JSX.Element => {
@@ -34,11 +33,12 @@ export const Top = (): JSX.Element => {
 
 const Container = styled.div`
   width: 150vh;
-  height: 100vh;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  margin-top: 200px;
 `
 const Imagee = styled.div`
   width: 50%;

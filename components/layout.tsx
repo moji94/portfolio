@@ -25,15 +25,17 @@ export const Layout = ({ children, title }: Props): JSX.Element => {
 const Container = styled.div`
   width: 100%;
   height: 100vh;
+  overflow: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fff;
+  background-color: #f7f7f7;
+  flex-direction: column;
 `
 const MainContent = styled.div`
   width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: flex-start;
 `

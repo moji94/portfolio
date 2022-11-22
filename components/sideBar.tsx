@@ -82,6 +82,7 @@ const SingleItem = styled.li<any>`
   }
   p {
     opacity: 0;
+    font-size: 15px;
   }
 `
 const Name = styled.div`
