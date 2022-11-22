@@ -1,4 +1,4 @@
-import Reacts from 'react'
+import React from 'react'
 import styled from 'styled-components'
 
 export const Top = (): JSX.Element => {
@@ -15,16 +15,14 @@ export const Top = (): JSX.Element => {
         </div>
       </Imagee>
       <Details>
-        <p>HI THERE! I'M</p>
+        <p className="title">HI THERE! I'M</p>
         <h1>Mojtaba Bahadori Zadeh</h1>
-        <p>
+        <p className="intro">
           A Front-End Web Developer passionate about creating interactive
           applications and experiences on the web
         </p>
         <div>
-          <div>
-            <p>Resume</p>
-          </div>
+          <button>Resume</button>
         </div>
       </Details>
     </Container>
@@ -32,13 +30,12 @@ export const Top = (): JSX.Element => {
 }
 
 const Container = styled.div`
-  width: 150vh;
-  height: auto;
+  width: 100%;
+  height: 100vh;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
-  margin-top: 200px;
 `
 const Imagee = styled.div`
   width: 50%;
@@ -61,12 +58,20 @@ const Imagee = styled.div`
 const Details = styled.div`
   width: 50%;
   height: 400px;
-  padding-top: 30px;
-  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
   h1 {
     color: #4169e1;
   }
-  p {
+  .title {
+    margin-top: 30px;
+    font-size: 20px;
+    color: #333;
+  }
+  .intro {
+    max-width: 507px;
     margin-top: 10px;
     font-size: 20px;
     color: #333;
@@ -77,7 +82,7 @@ const Details = styled.div`
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    div {
+    button {
       width: 150px;
       height: 50px;
       border-radius: 35px;
@@ -86,11 +91,7 @@ const Details = styled.div`
       justify-content: center;
       align-items: center;
       border: 2px solid #00f7ff;
-      p {
-        color: #fff;
-        font-size: 20px;
-        margin-bottom: 10px;
-      }
+      font-size: 20px;
     }
   }
 `

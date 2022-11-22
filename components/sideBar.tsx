@@ -39,10 +39,10 @@ const Container = styled.div`
   width: 105px;
   height: 100vh;
   position: fixed;
+  top: 0;
   left: 0;
   color: #ccc;
   transition: all 500ms;
-  float: left;
   :hover {
     width: 220px;
   }

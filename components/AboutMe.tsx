@@ -35,15 +35,15 @@ export const AboutMe = (): JSX.Element => {
 const Container = styled.div`
   width: 100%;
   height: 70vh;
-  margin-top: 40vh;
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 `
 const Top = styled.div`
-  width: 100%;
-  height: 15vh;
+  width: 60%;
+  height: 55px;
 `
 const Tittle = styled.div`
   width: 100%;
@@ -70,7 +70,7 @@ const TittleTop = styled.div`
   }
 `
 const TittleBottom = styled.div`
-  width: 100%;
+  width: 70%;
   height: 50%;
   display: flex;
   justify-content: flex-start;
@@ -82,7 +82,7 @@ const TittleBottom = styled.div`
   }
 `
 const Bottom = styled.div`
-  width: 100%;
+  width: 80%;
   height: 50vh;
   display: flex;
   justify-content: center;
