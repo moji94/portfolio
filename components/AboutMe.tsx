@@ -8,7 +8,7 @@ export const AboutMe = (): JSX.Element => {
         <Tittle>
           <TittleTop>
             <div></div>
-            <p>some info</p>
+            <p>SOME INFO</p>
           </TittleTop>
           <TittleBottom>
             <p>ABOUT ME</p>
@@ -34,7 +34,7 @@ export const AboutMe = (): JSX.Element => {
 
 const Container = styled.div`
   width: 100%;
-  height: 70vh;
+  height: 500px;
   margin-top: 40px;
   display: flex;
   flex-direction: column;
@@ -66,7 +66,7 @@ const TittleTop = styled.div`
   p {
     margin-left: 20px;
     color: #333;
-    font-size: 13px;
+    font-size: 10px;
   }
 `
 const TittleBottom = styled.div`
@@ -83,7 +83,7 @@ const TittleBottom = styled.div`
 `
 const Bottom = styled.div`
   width: 80%;
-  height: 50vh;
+  height: 350px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
