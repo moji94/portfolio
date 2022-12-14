@@ -181,6 +181,7 @@ const Inpotbox = styled.div`
     border-radius: 1px;
     font-size: 20px;
     padding-left: 10px;
+    color: #333;
   }
 `
 const Single = styled.div`
