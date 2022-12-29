@@ -55,7 +55,7 @@ export const Contacts = (): JSX.Element => {
 
 const Container = styled.div`
   width: 100%;
-  height: 1000px;
+  height: 500px;
   margin-top: 30px;
   display: flex;
   flex-direction: column;
@@ -63,7 +63,7 @@ const Container = styled.div`
   align-items: center;
 `
 const Top = styled.div`
-  width: 60%;
+  width: 70%;
   height: 55px;
 `
 const Tittle = styled.div`
@@ -103,7 +103,7 @@ const TittleBottom = styled.div`
   }
 `
 const Details = styled.div`
-  width: 60%;
+  width: 70%;
   height: 700px;
   background-color: #fff;
   border-radius: 40px;
@@ -115,7 +115,7 @@ const Details = styled.div`
 `
 const Dtop = styled.div`
   width: 100%;
-  height: 20%;
+  height: 30%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -129,11 +129,15 @@ const Dtop = styled.div`
 const Pbox = styled.div`
   width: 100%;
   margin-bottom: 10px;
+  p {
+    font-size: 15px;
+  }
 `
 const Subd = styled.div`
   width: 80%;
   height: 50%;
   display: flex;
+  margin-bottom: 10px;
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -152,21 +156,21 @@ const Dbot = styled.div`
   justify-content: center;
   align-items: center;
   p {
-    font-size: 25px;
-    margin-left: 30px;
+    font-size: 15px;
+    padding-left: 30px;
     color: #333;
   }
   button {
-    width: 150px;
+    width: 100px;
     height: 50px;
-    border-radius: 35px;
+    border-radius: 25px;
     background-color: #4169e1;
     display: flex;
     justify-content: center;
     align-items: center;
     border: 2px solid #00f7ff;
-    font-size: 20px;
-    margin-top: 15px;
+    font-size: 12px;
+    margin-top: 10px;
   }
 `
 const Inpotbox = styled.div`
@@ -174,12 +178,12 @@ const Inpotbox = styled.div`
   height: auto;
   input {
     width: 90%;
-    height: 50px;
+    height: 40px;
     margin-bottom: 15px;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 1px;
-    font-size: 20px;
+    font-size: 12px;
     padding-left: 10px;
     color: #333;
   }
