@@ -9,14 +9,14 @@ export const Top = (): JSX.Element => {
           <img
             src={'/images/personal.jpg'}
             alt={'its Mojtaba bahadori Zadeh'}
-            width="350"
-            height="350"
+            width="250"
+            height="250"
           />
         </div>
       </Imagee>
       <Details>
         <p className="title">HI THERE! I'M</p>
-        <h1>Mojtaba Bahadori Zadeh</h1>
+        <h2>Mojtaba Bahadori Zadeh</h2>
         <p className="intro">
           A Front-End Web Developer passionate about creating interactive
           applications and experiences on the web
@@ -31,24 +31,26 @@ export const Top = (): JSX.Element => {
 
 const Container = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 500px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 `
+
 const Imagee = styled.div`
   width: 50%;
   height: 400px;
   display: flex;
+
   justify-content: flex-end;
   align-items: center;
   div {
-    width: 350px;
-    height: 350px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     margin-right: 50px;
-    box-shadow: 12px 0 #73a8fe, 24px 0 #92bcff, 36px 0 #c2dcff;
+    box-shadow: 10px 0 #73a8fe, 20px 0 #92bcff, 30px 0 #c2dcff;
     z-index: 1;
     img {
       border-radius: 50%;
@@ -62,36 +64,39 @@ const Details = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  h1 {
+  padding-left: 20px;
+  padding-right: 100px;
+  h2 {
     color: #4169e1;
   }
   .title {
     margin-top: 30px;
-    font-size: 20px;
+    font-size: 12px;
     color: #333;
   }
   .intro {
     max-width: 507px;
     margin-top: 10px;
-    font-size: 20px;
+    font-size: 12px;
     color: #333;
   }
   div {
     width: 100%;
-    height: 50%;
+    height: 30%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    padding-top: 20px;
     button {
-      width: 150px;
-      height: 50px;
+      width: 100px;
+      height: 30px;
       border-radius: 35px;
       background-color: #4169e1;
       display: flex;
       justify-content: center;
       align-items: center;
       border: 2px solid #00f7ff;
-      font-size: 20px;
+      font-size: 12px;
     }
   }
 `
