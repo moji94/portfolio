@@ -37,12 +37,13 @@ const Container = styled.div`
   height: 500px;
   margin-top: 40px;
   display: flex;
+
   flex-direction: column;
   justify-content: center;
   align-items: center;
 `
 const Top = styled.div`
-  width: 60%;
+  width: 70%;
   height: 55px;
 `
 const Tittle = styled.div`
@@ -57,6 +58,7 @@ const TittleTop = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+
   align-items: center;
   div {
     width: 45px;
@@ -90,7 +92,7 @@ const Bottom = styled.div`
   padding: 30px;
 `
 const Details = styled.div`
-  width: 80%;
+  width: 90%;
   height: 250px;
   background-color: #fff;
   border-radius: 40px;
@@ -98,11 +100,11 @@ const Details = styled.div`
   justify-content: center;
   align-items: center;
   padding-left: 30px;
-  padding-right: 50px;
+  padding-right: 30px;
 
   p {
     color: #333;
-    font-size: 20px;
-    padding: 48px;
+    font-size: 13px;
+    padding: 30px;
   }
 `
