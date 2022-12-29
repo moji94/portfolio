@@ -2,12 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 import { Home, About, Skills, Work, Contact } from '@components'
 
-export const SideBar = (): JSX.Element => {
+export const Sidebar = (): JSX.Element => {
   return (
     <Container>
-      <Name>
+      <Namee>
         <p>MBZ</p>
-      </Name>
+      </Namee>
 
       <Items>
         <SingleItem>
@@ -28,7 +28,7 @@ export const SideBar = (): JSX.Element => {
         </SingleItem>
         <SingleItem>
           <Contact />
-          <p className="pp">CONTACT</p>
+          <p className="pp"> CONTACT</p>
         </SingleItem>
       </Items>
     </Container>
@@ -36,15 +36,15 @@ export const SideBar = (): JSX.Element => {
 }
 
 const Container = styled.div`
-  width: 105px;
-  height: 100vh;
+  width: 70px;
+  height: 90%;
   position: fixed;
   top: 0;
   left: 0;
   color: #ccc;
   transition: all 500ms;
   :hover {
-    width: 220px;
+    width: 130px;
   }
   &:hover .pp {
     transition: all 500ms;
@@ -54,46 +54,49 @@ const Container = styled.div`
 
 const Items = styled.ul`
   width: 100%;
-  height: 85vh;
+  height: 100%;
   background-color: #4169e1;
   flex-direction: column;
-  padding-left: 20px;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   list-style-type: none;
 `
 const SingleItem = styled.li<any>`
-  width: 175px;
-  height: 50px;
+  width: 75px;
+  height: 40px;
   display: flex;
   flex-direction: row;
   color: #ccc;
   font-size: 20px;
   border-radius: 5px;
+  margin-left: 20px;
   justify-content: space-around;
   align-items: center;
-  margin-top: 10px;
-  transition: all 800ms;
+  transition: all 300ms;
+  padding-left: 10px;
   :hover {
+    width: 90px;
     background-color: rgba(102, 140, 194, 0.5);
     box-shadow: 2px 2px 2px 2px rgba(39, 61, 93, 0.3);
     cursor: pointer;
   }
   p {
     opacity: 0;
-    font-size: 15px;
+    font-size: 10px;
+    margin-left: 5px;
   }
 `
-const Name = styled.div`
+const Namee = styled.div`
   width: 100%;
-  height: 15vh;
+  height: 70px;
   background-color: #255db2;
   display: flex;
   justify-content: center;
   align-items: center;
   p {
-    font-size: 30px;
+    font-size: 25px;
     font-family: 'Vazir';
+    margin-top: 5px;
   }
 `

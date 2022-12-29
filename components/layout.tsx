@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import styled from 'styled-components'
-import { SideBar } from '@components'
+import { Sidebar } from '@components'
 
 interface Props {
   children?: any
@@ -15,7 +15,7 @@ export const Layout = ({ children, title }: Props): JSX.Element => {
         <title>{title}</title>
       </Head>
       <Container>
-        <SideBar />
+        <Sidebar />
         <MainContent>{children}</MainContent>
       </Container>
     </div>
