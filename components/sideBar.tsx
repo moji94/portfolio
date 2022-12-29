@@ -37,7 +37,7 @@ export const Sidebar = (): JSX.Element => {
 
 const Container = styled.div`
   width: 70px;
-  height: 90%;
+  height: 500px;
   position: fixed;
   top: 0;
   left: 0;
@@ -58,25 +58,25 @@ const Items = styled.ul`
   background-color: #4169e1;
   flex-direction: column;
   display: flex;
+  padding-left: 20px;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   list-style-type: none;
+  padding-bottom: 110px;
 `
 const SingleItem = styled.li<any>`
-  width: 75px;
+  width: 90px;
   height: 40px;
   display: flex;
+  margin-top: 2px;
   flex-direction: row;
   color: #ccc;
   font-size: 20px;
   border-radius: 5px;
-  margin-left: 20px;
   justify-content: space-around;
   align-items: center;
-  transition: all 300ms;
-  padding-left: 10px;
+  transition: all 500ms;
   :hover {
-    width: 90px;
     background-color: rgba(102, 140, 194, 0.5);
     box-shadow: 2px 2px 2px 2px rgba(39, 61, 93, 0.3);
     cursor: pointer;

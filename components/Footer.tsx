@@ -10,9 +10,10 @@ export const Footer = (): JSX.Element => {
 }
 const Container = styled.div`
   width: 100%;
-  height: 60px;
+  height: 40px;
   background-color: #fff;
   display: flex;
+  margin-top: 40px;
   justify-content: center;
   align-items: center;
   p {

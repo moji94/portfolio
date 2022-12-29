@@ -85,7 +85,7 @@ export const Work = (props: SVGProps<SVGSVGElement>): any => (
   </svg>
 )
 export const Contact = (props: SVGProps<SVGSVGElement>): any => (
-  <svg width="2em" height="1em" viewBox="0 0 24 24" fill="none">
+  <svg width="1em" height="1em" viewBox="0 0 20 20" fill="none">
     <path
       fill-rule="evenodd"
       clip-rule="evenodd"
