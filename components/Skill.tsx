@@ -110,7 +110,7 @@ const Container = styled.div`
   align-items: center;
 `
 const Top = styled.div`
-  width: 60%;
+  width: 70%;
   height: 55px;
 `
 const Tittle = styled.div`
@@ -150,7 +150,7 @@ const TittleBottom = styled.div`
   }
 `
 const Details = styled.div`
-  width: 60%;
+  width: 70%;
   height: 250px;
   background-color: #fff;
   border-radius: 40px;
