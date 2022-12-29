@@ -171,7 +171,7 @@ const Container = styled.div`
   align-items: center;
 `
 const Top = styled.div`
-  width: 60%;
+  width: 70%;
   height: 55px;
 `
 const Tittle = styled.div`
@@ -211,7 +211,7 @@ const TittleBottom = styled.div`
   }
 `
 const Details = styled.div`
-  width: 60%;
+  width: 70%;
   height: auto;
   background-color: #fff;
   border-radius: 40px;
@@ -255,5 +255,8 @@ const Text = styled.div`
   color: #333;
   h2 {
     margin-bottom: 30px;
+  }
+  p {
+    font-size: 12px;
   }
 `
