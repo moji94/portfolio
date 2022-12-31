@@ -31,18 +31,24 @@ export const Top = (): JSX.Element => {
 
 const Container = styled.div`
   width: 100%;
-  height: 500px;
+  min-height: 500px;
+  height: auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  @media (max-width: 750px) {
+    flex-direction: column;
+    height: 450px;
+    padding-top: 30px;
+  }
 `
 
 const Imagee = styled.div`
   width: 50%;
   height: 400px;
   display: flex;
-
+  flex-direction: row;
   justify-content: flex-end;
   align-items: center;
   div {
@@ -55,6 +61,14 @@ const Imagee = styled.div`
     img {
       border-radius: 50%;
     }
+    @media (max-width: 750px) {
+      margin-right: 0;
+    }
+  }
+  @media (max-width: 750px) {
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
   }
 `
 const Details = styled.div`
@@ -68,6 +82,7 @@ const Details = styled.div`
   padding-right: 100px;
   h2 {
     color: #4169e1;
+    text-align: center;
   }
   .title {
     margin-top: 30px;
@@ -75,10 +90,13 @@ const Details = styled.div`
     color: #333;
   }
   .intro {
-    max-width: 507px;
     margin-top: 10px;
     font-size: 12px;
     color: #333;
+    @media (max-width: 750px) {
+      text-align: center;
+      margin-top: 0;
+    }
   }
   div {
     width: 100%;
@@ -98,5 +116,16 @@ const Details = styled.div`
       border: 2px solid #00f7ff;
       font-size: 12px;
     }
+    @media (max-width: 750px) {
+      justify-content: center;
+      align-items: flex-start;
+    }
+  }
+  @media (max-width: 750px) {
+    align-items: center;
+    justify-content: flex-start;
+    width: 75%;
+    padding-left: 0;
+    padding-right: 0;
   }
 `
