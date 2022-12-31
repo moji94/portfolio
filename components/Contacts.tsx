@@ -115,7 +115,7 @@ const Details = styled.div`
 `
 const Dtop = styled.div`
   width: 100%;
-  height: 30%;
+  height: 40%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -128,7 +128,6 @@ const Dtop = styled.div`
 `
 const Pbox = styled.div`
   width: 100%;
-  margin-bottom: 10px;
   p {
     font-size: 15px;
   }
@@ -150,7 +149,7 @@ const Subd = styled.div`
 `
 const Dbot = styled.div`
   width: 100%;
-  height: 60%;
+  height: 70%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -189,8 +188,8 @@ const Inpotbox = styled.div`
   }
 `
 const Single = styled.div`
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -202,8 +201,8 @@ const Single = styled.div`
   box-shadow: 1px 1px 1px 1px #eee;
   transition: all 500ms;
   :hover {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     box-shadow: 2px 2px 2px 2px #eee;
   }
 `
