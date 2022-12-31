@@ -35,15 +35,17 @@ export const AboutMe = (): JSX.Element => {
 const Container = styled.div`
   width: 100%;
   height: 500px;
-  margin-top: 40px;
+  margin-top: 20px;
   display: flex;
-
   flex-direction: column;
+  background-color: aqua;
   justify-content: center;
   align-items: center;
+  @media (max-width: 750px) {
+  }
 `
 const Top = styled.div`
-  width: 70%;
+  width: 80%;
   height: 55px;
 `
 const Tittle = styled.div`
@@ -58,12 +60,14 @@ const TittleTop = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-
   align-items: center;
   div {
     width: 45px;
-    margin-left: 30px;
     border-top: 1.5px solid #333;
+    margin-left: 30px;
+    @media (max-width: 750px) {
+      margin-left: 20;
+    }
   }
   p {
     margin-left: 20px;
@@ -85,23 +89,31 @@ const TittleBottom = styled.div`
 `
 const Bottom = styled.div`
   width: 80%;
-  height: 350px;
+  height: 300px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   padding: 30px;
+  @media (max-width: 750px) {
+    width: 80%;
+    height: auto;
+  }
 `
 const Details = styled.div`
-  width: 90%;
-  height: 250px;
+  width: 100%;
+  height: 200px;
   background-color: #fff;
   border-radius: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 30px;
-  padding-right: 30px;
-
+  padding-left: 10px;
+  padding-right: 10px;
+  @media (max-width: 750px) {
+    height: auto;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
   p {
     color: #333;
     font-size: 13px;
