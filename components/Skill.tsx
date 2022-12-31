@@ -33,67 +33,63 @@ export const Skill = (): JSX.Element => {
       </Top>
 
       <Details>
-        <Section>
-          <Single>
-            <Html />
-            <p>HTML</p>
-          </Single>
-          <Single>
-            <Css />
-            <p>CSS</p>
-          </Single>
-          <Single>
-            <Sass />
-            <p>SASS</p>
-          </Single>
-          <Single>
-            <Js />
-            <p>Javascript</p>
-          </Single>
-          <Single>
-            <Reacts />
-            <p>ReactNative</p>
-          </Single>
-          <Single>
-            <Next />
-            <p>NextJs</p>
-          </Single>
-          <Single>
-            <Express />
-            <p>ExpressJs</p>
-          </Single>
-        </Section>
+        <Single>
+          <Html />
+          <p>HTML</p>
+        </Single>
+        <Single>
+          <Css />
+          <p>CSS</p>
+        </Single>
+        <Single>
+          <Sass />
+          <p>SASS</p>
+        </Single>
+        <Single>
+          <Js />
+          <p>Javascript</p>
+        </Single>
+        <Single>
+          <Reacts />
+          <p>ReactNative</p>
+        </Single>
+        <Single>
+          <Next />
+          <p>NextJs</p>
+        </Single>
+        <Single>
+          <Express />
+          <p>ExpressJs</p>
+        </Single>
         {/* top section */}
-        <Section>
-          <Single>
-            <Typescript />
-            <p>Typescript</p>
-          </Single>
-          <Single>
-            <Nodejs />
-            <p>NodeJs</p>
-          </Single>
-          <Single>
-            <Prisma />
-            <p>PrismaJs</p>
-          </Single>
-          <Single>
-            <Rest />
-            <p>Rest API</p>
-          </Single>
-          <Single>
-            <Postman />
-            <p>Postman</p>
-          </Single>
-          <Single>
-            <Git />
-            <p>Git</p>
-          </Single>
-          <Single>
-            <Postgree />
-            <p>PostgreeSQL</p>
-          </Single>
-        </Section>
+        <Single>
+          <Typescript />
+          <p>Typescript</p>
+        </Single>
+        <Single>
+          <Nodejs />
+          <p>NodeJs</p>
+        </Single>
+        <Single>
+          <Prisma />
+          <p>PrismaJs</p>
+        </Single>
+        <Single>
+          <Rest />
+          <p>Rest API</p>
+        </Single>
+        <Single>
+          <Postman />
+          <p>Postman</p>
+        </Single>
+        <Single>
+          <Git />
+          <p>Git</p>
+        </Single>
+        <Single>
+          <Postgree />
+          <p>PostgreeSQL</p>
+        </Single>
         {/* bottom section */}
       </Details>
     </Container>
@@ -108,9 +104,13 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: aqua;
+  /* @media (max-width: 750px) {
+    height: auto;
+  } */
 `
 const Top = styled.div`
-  width: 70%;
+  width: 90%;
   height: 55px;
 `
 const Tittle = styled.div`
@@ -151,40 +151,44 @@ const TittleBottom = styled.div`
 `
 const Details = styled.div`
   width: 70%;
-  height: 250px;
+  height: 300px;
   background-color: #fff;
   border-radius: 40px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   align-items: center;
   margin-top: 30px;
-`
-const Section = styled.div`
-  width: 100%;
-  height: 40%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  /* @media (max-width: 750px) {
+    height: auto;
+  } */
 `
 const Single = styled.div`
-  width: 75px;
-  height: 75px;
+  width: 70px;
+  height: 70px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 15px;
   padding: 5px;
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
   box-shadow: 1px 1px 1px 1px #eee;
   transition: all 500ms;
   :hover {
-    width: 90px;
-    height: 90px;
+    width: 85px;
+    height: 85px;
     box-shadow: 5px 5px 5px 5px #eee;
     p {
       font-size: 15px;
+      @media (max-width: 750px) {
+        font-size: 10px;
+      }
     }
   }
   p {
@@ -192,5 +196,16 @@ const Single = styled.div`
     color: #333;
     transition: all 500ms;
     margin-top: 5px;
+    @media (max-width: 750px) {
+      font-size: 8px;
+    }
+  }
+  @media (max-width: 750px) {
+    width: 50px;
+    height: 50px;
+    :hover {
+      width: 60px;
+      height: 60px;
+    }
   }
 `
