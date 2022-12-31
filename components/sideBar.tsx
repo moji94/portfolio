@@ -2,9 +2,13 @@ import React from 'react'
 import styled from 'styled-components'
 import { Home, About, Skills, Work, Contact } from '@components'
 
-export const Sidebar = (): JSX.Element => {
+interface Props {
+  change: 'desktop' | 'phone'
+}
+
+export const Sidebar = ({ change }: Props): JSX.Element => {
   return (
-    <Container>
+    <Container change={change}>
       <Namee>
         <p>MBZ</p>
       </Namee>
@@ -35,7 +39,7 @@ export const Sidebar = (): JSX.Element => {
   )
 }
 
-const Container = styled.div`
+const Container = styled.div<{ change: 'desktop' | 'phone' }>`
   width: 70px;
   height: 500px;
   position: fixed;
@@ -49,6 +53,9 @@ const Container = styled.div`
   &:hover .pp {
     transition: all 500ms;
     opacity: 1;
+  }
+  @media (max-width: 750px) {
+    display: ${(d) => (d.change === 'desktop' ? 'inline-block' : 'none')};
   }
 `
 

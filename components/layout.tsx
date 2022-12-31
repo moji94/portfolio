@@ -1,21 +1,32 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Head from 'next/head'
 import styled from 'styled-components'
-import { Sidebar } from '@components'
+import { Menu, Sidebar } from '@components'
 
 interface Props {
   children?: any
   title: string
 }
-
 export const Layout = ({ children, title }: Props): JSX.Element => {
+  const [change, setChange] = useState<'desktop' | 'phone'>('desktop')
+  const handleclick = () => {
+    setChange('phone')
+    console.log(change)
+  }
   return (
     <div>
       <Head>
         <title>{title}</title>
       </Head>
       <Container>
-        <Sidebar />
+        <Menuu
+          onClick={() => {
+            handleclick()
+          }}
+        >
+          <Menu />
+        </Menuu>
+        <Sidebar change={change}></Sidebar>
         <MainContent>{children}</MainContent>
       </Container>
     </div>
@@ -37,4 +48,20 @@ const MainContent = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+`
+const Menuu = styled.div`
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  top: 5px;
+  right: 5px;
+  display: none;
+  :hover {
+    cursor: pointer;
+  }
+  @media (max-width: 750px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 `
