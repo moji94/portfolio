@@ -221,9 +221,12 @@ const Details = styled.div`
   align-items: center;
   margin-top: 30px;
   padding-top: 30px;
+  @media (max-width: 750px) {
+    width: 90%;
+  }
 `
 const Box = styled.div`
-  width: 90%;
+  width: 80%;
   height: 300px;
   box-shadow: 1px 30px 30px #eee;
   border: 1px solid #eee;
@@ -233,6 +236,11 @@ const Box = styled.div`
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
+  @media (max-width: 750px) {
+    width: 90%;
+    height: 350px;
+    flex-direction: column;
+  }
 `
 const Pic = styled.div`
   width: 40%;
@@ -244,6 +252,9 @@ const Pic = styled.div`
   img {
     border-radius: 25px;
   }
+  @media (max-width: 750px) {
+    margin-top: 10px;
+  }
 `
 const Text = styled.div`
   width: 60%;
@@ -252,11 +263,22 @@ const Text = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  padding: 10px;
   color: #333;
   h2 {
     margin-bottom: 30px;
+    @media (max-width: 750px) {
+      margin-bottom: 10px;
+    }
   }
   p {
     font-size: 12px;
+    @media (max-width: 750px) {
+      text-align: center;
+    }
+  }
+  @media (max-width: 750px) {
+    width: 90%;
+    height: 350px;
   }
 `
