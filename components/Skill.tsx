@@ -99,7 +99,6 @@ export const Skill = (): JSX.Element => {
 const Container = styled.div`
   width: 100%;
   height: 500px;
-  margin-top: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -35,7 +35,6 @@ export const AboutMe = (): JSX.Element => {
 const Container = styled.div`
   width: 100%;
   height: 500px;
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
