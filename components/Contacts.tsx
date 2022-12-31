@@ -131,6 +131,11 @@ const Pbox = styled.div`
   p {
     font-size: 15px;
   }
+  @media (max-width: 750px) {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
 `
 const Subd = styled.div`
   width: 80%;
@@ -170,6 +175,7 @@ const Dbot = styled.div`
     border: 2px solid #00f7ff;
     font-size: 12px;
     margin-top: 10px;
+    margin-bottom: 10px;
   }
 `
 const Inpotbox = styled.div`
@@ -204,5 +210,17 @@ const Single = styled.div`
     width: 60px;
     height: 60px;
     box-shadow: 2px 2px 2px 2px #eee;
+    @media (max-width: 750px) {
+    }
+  }
+  @media (max-width: 750px) {
+    width: 40px;
+    height: 40px;
+    margin-left: 8px;
+    margin-right: 8px;
+    :hover {
+      width: 50px;
+      height: 50px;
+    }
   }
 `
