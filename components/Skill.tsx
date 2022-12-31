@@ -104,13 +104,9 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: aqua;
-  /* @media (max-width: 750px) {
-    height: auto;
-  } */
 `
 const Top = styled.div`
-  width: 90%;
+  width: 80%;
   height: 55px;
 `
 const Tittle = styled.div`
@@ -162,9 +158,6 @@ const Details = styled.div`
   margin-top: 30px;
   padding-left: 20px;
   padding-right: 20px;
-  /* @media (max-width: 750px) {
-    height: auto;
-  } */
 `
 const Single = styled.div`
   width: 70px;
@@ -183,7 +176,7 @@ const Single = styled.div`
   :hover {
     width: 85px;
     height: 85px;
-    box-shadow: 5px 5px 5px 5px #eee;
+    box-shadow: 4px 4px 4px 4px #eee;
     p {
       font-size: 15px;
       @media (max-width: 750px) {
@@ -204,6 +197,7 @@ const Single = styled.div`
     width: 50px;
     height: 50px;
     :hover {
+      box-shadow: 2px 2px 2px 2px #eee;
       width: 60px;
       height: 60px;
     }
