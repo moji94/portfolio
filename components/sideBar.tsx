@@ -55,7 +55,7 @@ const Container = styled.div<{ change: 'desktop' | 'phone' }>`
     opacity: 1;
   }
   @media (max-width: 750px) {
-    display: ${(d) => (d.change === 'desktop' ? 'inline-block' : 'none')};
+    display: ${(d) => (d.change === 'phone' ? 'inline-block' : 'none')};
   }
 `
 

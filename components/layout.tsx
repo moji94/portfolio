@@ -10,7 +10,11 @@ interface Props {
 export const Layout = ({ children, title }: Props): JSX.Element => {
   const [change, setChange] = useState<'desktop' | 'phone'>('desktop')
   const handleclick = () => {
-    setChange('phone')
+    if (change == 'desktop') {
+      setChange('phone')
+    } else {
+      setChange('desktop')
+    }
     console.log(change)
   }
   return (
