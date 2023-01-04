@@ -22,7 +22,9 @@ export const Top = (): JSX.Element => {
           applications and experiences on the web
         </p>
         <div>
-          <button>Resume</button>
+          <a href="/images/86.jpg">
+            <button>Resume</button>
+          </a>
         </div>
       </Details>
     </Container>

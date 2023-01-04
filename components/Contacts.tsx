@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Github, Instagram, Linkedin, Twitter } from './Icons'
 
 export const Contacts = (): JSX.Element => {
+  const [name, setName] = useState<string>('')
   return (
     <Container>
       <Top>
@@ -41,10 +42,10 @@ export const Contacts = (): JSX.Element => {
             <p>Contact Form</p>
           </Pbox>
           <Inpotbox>
-            <input placeholder="Your Name*" />
-            <input placeholder="Your Email*" />
-            <input placeholder="Subject*" />
-            <input placeholder="Your Message*" />
+            <input placeholder="Your Name*" value={name} />
+            <input placeholder="Your Email*" value={name} />
+            <input placeholder="Subject*" value={name} />
+            <input placeholder="Your Message*" value={name} />
           </Inpotbox>
           <button>Send</button>
         </Dbot>
