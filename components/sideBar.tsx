@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Home, About, Skills, Work, Contact } from '@components'
 
@@ -7,6 +7,9 @@ interface Props {
 }
 
 export const Sidebar = ({ change }: Props): JSX.Element => {
+  const scroll = (y: number) => {
+    document.documentElement.scrollTop = document.body.scrollTop = y
+  }
   return (
     <Container change={change}>
       <Namee>
@@ -14,23 +17,43 @@ export const Sidebar = ({ change }: Props): JSX.Element => {
       </Namee>
 
       <Items>
-        <SingleItem>
+        <SingleItem
+          onClick={() => {
+            scroll(0)
+          }}
+        >
           <Home />
           <p className="pp">HOME </p>
         </SingleItem>
-        <SingleItem>
+        <SingleItem
+          onClick={() => {
+            scroll(500)
+          }}
+        >
           <About />
           <p className="pp">ABOUT </p>
         </SingleItem>
-        <SingleItem>
+        <SingleItem
+          onClick={() => {
+            scroll(1000)
+          }}
+        >
           <Skills />
           <p className="pp"> SKILLS </p>
         </SingleItem>
-        <SingleItem>
+        <SingleItem
+          onClick={() => {
+            scroll(1500)
+          }}
+        >
           <Work />
           <p className="pp">WORK </p>
         </SingleItem>
-        <SingleItem>
+        <SingleItem
+          onClick={() => {
+            scroll(3950)
+          }}
+        >
           <Contact />
           <p className="pp"> CONTACT</p>
         </SingleItem>
