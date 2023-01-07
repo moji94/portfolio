@@ -2,8 +2,9 @@ import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import { createGlobalStyle } from 'styled-components'
 import '../public/fonts/Vazir/font.css'
+import { appWithTranslation } from 'next-i18next'
 
-export default function App({ Component, pageProps }: AppProps) {
+const App = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <GlobalStyle />
@@ -33,3 +34,4 @@ const GlobalStyle = createGlobalStyle`
     color: #0095ff !important;
   }
 `
+export default appWithTranslation(App)

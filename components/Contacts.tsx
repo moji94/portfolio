@@ -42,10 +42,10 @@ export const Contacts = (): JSX.Element => {
             <p>Contact Form</p>
           </Pbox>
           <Inpotbox>
-            <input placeholder="Your Name*" value={name} />
-            <input placeholder="Your Email*" value={name} />
-            <input placeholder="Subject*" value={name} />
-            <input placeholder="Your Message*" value={name} />
+            <input placeholder="Your Name*" />
+            <input placeholder="Your Email*" />
+            <input placeholder="Subject*" />
+            <input placeholder="Your Message*" />
           </Inpotbox>
           <button>Send</button>
         </Dbot>

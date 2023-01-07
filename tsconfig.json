@@ -16,12 +16,9 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@components": [
-        "components"
-      ],
+      "@components": ["components"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"],
- 
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "next-i18next.config.js"],
+  "exclude": ["node_modules"]
 }

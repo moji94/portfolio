@@ -1,4 +1,5 @@
 import React from 'react'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import {
   Layout,
   Top,
@@ -20,4 +21,13 @@ export default function Home() {
       <Footer />
     </Layout>
   )
+}
+
+export async function getStaticProps({ locale }: any) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common'])),
+      // Will be passed to the page component as props
+    },
+  }
 }

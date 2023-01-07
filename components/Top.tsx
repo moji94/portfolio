@@ -1,7 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
+import { useTranslation } from 'react-i18next'
 
 export const Top = (): JSX.Element => {
+  const { t } = useTranslation()
   return (
     <Container>
       <Imagee>
@@ -15,7 +17,7 @@ export const Top = (): JSX.Element => {
         </div>
       </Imagee>
       <Details>
-        <p className="title">HI THERE! I'M</p>
+        <div className="title">{t('hi')}</div>
         <h2>Mojtaba Bahadori Zadeh</h2>
         <p className="intro">
           A Front-End Web Developer passionate about creating interactive
