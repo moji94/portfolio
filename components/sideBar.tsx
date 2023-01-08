@@ -64,7 +64,7 @@ export const Sidebar = ({ change }: Props): JSX.Element => {
 
 const Container = styled.div<{ change: 'desktop' | 'phone' }>`
   width: 70px;
-  height: 500px;
+  height: 100vh;
   position: fixed;
   top: 0;
   left: 0;

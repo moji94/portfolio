@@ -1,31 +1,25 @@
 import React from 'react'
 import styled from 'styled-components'
+import { useTranslation } from 'next-i18next'
 
 export const AboutMe = (): JSX.Element => {
+  const { t } = useTranslation('common')
   return (
     <Container>
       <Top>
         <Tittle>
           <TittleTop>
             <div></div>
-            <p>SOME INFO</p>
+            <p>{t('some')}</p>
           </TittleTop>
           <TittleBottom>
-            <p>ABOUT ME</p>
+            <p>{t('aboutme')}</p>
           </TittleBottom>
         </Tittle>
       </Top>
       <Bottom>
         <Details>
-          <p>
-            I'm a front-end web developer with a background in computer systems
-            and network infrastructure. My 8 years of IT experience has given me
-            a strong foundation for web development and building complex
-            solutions. Recently, I graduated from the Juno College Immersive Web
-            Development Bootcamp. I am passionate about coding and solving
-            problems through code, and I am excited to work alongside other
-            amazing programmers and learn so much more!
-          </p>
+          <p>{t('aboutd')}</p>
         </Details>
       </Bottom>
     </Container>

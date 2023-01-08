@@ -16,18 +16,20 @@ import {
   Git,
   Postgree,
 } from './Icons'
+import { useTranslation } from 'next-i18next'
 
 export const Skill = (): JSX.Element => {
+  const { t } = useTranslation('common')
   return (
     <Container>
       <Top>
         <Tittle>
           <TittleTop>
             <div></div>
-            <p>CHECK OUT ME</p>
+            <p>{t('check')}</p>
           </TittleTop>
           <TittleBottom>
-            <p>SKILLS</p>
+            <p>{t('skill')}</p>
           </TittleBottom>
         </Tittle>
       </Top>

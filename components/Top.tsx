@@ -18,14 +18,15 @@ export const Top = (): JSX.Element => {
       </Imagee>
       <Details>
         <p className="title">{t('hi')}</p>
-        <h2>Mojtaba Bahadori Zadeh</h2>
-        <p className="intro">
-          A Front-End Web Developer passionate about creating interactive
-          applications and experiences on the web
-        </p>
+        <h2>
+          <p>{t('am')}</p>
+          {t('name')}
+          <p>{t('i')}</p>
+        </h2>
+        <p className="intro">{t('me')}</p>
         <div>
           <a href="/images/86.jpg">
-            <button>Resume</button>
+            <button>{t('resome')}</button>
           </a>
         </div>
       </Details>
@@ -87,6 +88,13 @@ const Details = styled.div`
   h2 {
     color: #4169e1;
     text-align: center;
+    display: flex;
+    flex-direction: row;
+    p {
+      margin: 10px;
+      font-size: 12px;
+      color: #333;
+    }
   }
   .title {
     margin-top: 30px;
@@ -119,6 +127,7 @@ const Details = styled.div`
       align-items: center;
       border: 2px solid #00f7ff;
       font-size: 12px;
+      font-family: 'Vazir';
     }
     @media (max-width: 750px) {
       justify-content: center;

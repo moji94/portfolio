@@ -1,17 +1,19 @@
 import React from 'react'
 import styled from 'styled-components'
+import { useTranslation } from 'next-i18next'
 
 export const Projects = () => {
+  const { t } = useTranslation('common')
   return (
     <Container>
       <Top>
         <Tittle>
           <TittleTop>
             <div></div>
-            <p>TAKE A LOOK AT MY</p>
+            <p>{t('look')}</p>
           </TittleTop>
           <TittleBottom>
-            <p>PROJECTS</p>
+            <p>{t('project')}</p>
           </TittleBottom>
         </Tittle>
       </Top>

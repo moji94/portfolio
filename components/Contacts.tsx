@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Github, Instagram, Linkedin, Twitter } from './Icons'
+import { useTranslation } from 'next-i18next'
 
 export const Contacts = (): JSX.Element => {
+  const { t } = useTranslation('common')
   const [name, setName] = useState<string>('')
   return (
     <Container>
@@ -10,17 +12,17 @@ export const Contacts = (): JSX.Element => {
         <Tittle>
           <TittleTop>
             <div></div>
-            <p>SAY HELLO</p>
+            <p>{t('hello')}</p>
           </TittleTop>
           <TittleBottom>
-            <p>CONTACT</p>
+            <p>{t('contact')}</p>
           </TittleBottom>
         </Tittle>
       </Top>
       <Details>
         <Dtop>
           <Pbox>
-            <p>Get in Touch</p>
+            <p>{t('touch')}</p>
           </Pbox>
           <Subd>
             <Single>
@@ -39,15 +41,15 @@ export const Contacts = (): JSX.Element => {
         </Dtop>
         <Dbot>
           <Pbox>
-            <p>Contact Form</p>
+            <p>{t('form')}</p>
           </Pbox>
           <Inpotbox>
             <input placeholder="Your Name*" />
             <input placeholder="Your Email*" />
             <input placeholder="Subject*" />
-            <input placeholder="Your Message*" />
+            <input placeholder="$`{t('fmessage')}`" />
           </Inpotbox>
-          <button>Send</button>
+          <button>{t('send')}</button>
         </Dbot>
       </Details>
     </Container>
@@ -160,6 +162,7 @@ const Dbot = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   p {
     font-size: 15px;
     padding-left: 30px;
@@ -177,6 +180,7 @@ const Dbot = styled.div`
     font-size: 12px;
     margin-top: 10px;
     margin-bottom: 10px;
+    font-family: 'Vazir';
   }
 `
 const Inpotbox = styled.div`

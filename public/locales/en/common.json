@@ -1,3 +1,24 @@
 {
-  "hi": "HI THERE! I'M"
+  "hi": "HI THERE! I'M",
+  "i": "",
+  "name": "Mojtaba Bahadori Zadeh",
+  "am": "",
+  "me": "A Front-End Web Developer passionate about creating interactive applications and experiences on the web",
+  "resome": "Resome",
+  "some": "SOME INFO",
+  "aboutme": "ABOUT ME",
+  "aboutd": "My name is Mojtaba Bahadrizadeh, a user interface programmer. I am always trying to increase my level of knowledge and update my skills. Most of my focus is on web and application development, I believe that the more I drink from the sea of knowledge, the thirstier I become. I owe my skills to my hard work and patience, I welcome challenges because I can test myself and increase my experience. I enjoy team work because it increases learning and creativity, and finally I must say that I am always focused on my goal and it motivates me to move forward carefully and seriously.",
+  "check": "CHECK OUT ME",
+  "skill": "SKILLS",
+  "look": "TAKE A LOOK AT MY",
+  "project": "PROJECTS",
+  "hello": "SAY HELLO",
+  "contact": "CONTACT",
+  "touch": "Get in Touch",
+  "form": "Contact Form",
+  "fname": "Your Name*",
+  "femail": "Your Email*",
+  "fsobject": "Subject*",
+  "fmessage": "{{Your Message*}}",
+  "send": "SEND"
 }
