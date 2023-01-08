@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { Home, About, Skills, Work, Contact } from '@components'
+import { Home, About, Skills, Work, Contact, Bottom, Earth } from '@components'
 
 interface Props {
   change: 'desktop' | 'phone'
@@ -16,6 +16,14 @@ export const Sidebar = ({ change }: Props): JSX.Element => {
         <p>MBZ</p>
       </Namee>
 
+      <Langu>
+        <Bottom />
+        <Earth />
+      </Langu>
+      <LanguDrop>
+        <div className="left">FA</div>
+        <div className="right">EN</div>
+      </LanguDrop>
       <Items>
         <SingleItem
           onClick={() => {
@@ -66,6 +74,11 @@ const Container = styled.div<{ change: 'desktop' | 'phone' }>`
   width: 70px;
   height: 100vh;
   position: fixed;
+  display: flex;
+  justify-content: center;
+  background-color: #4169e1;
+  align-items: center;
+  flex-direction: column;
   top: 0;
   left: 0;
   color: #ccc;
@@ -128,5 +141,65 @@ const Namee = styled.div`
     font-size: 25px;
     font-family: 'Vazir';
     margin-top: 5px;
+  }
+`
+const Langu = styled.div`
+  width: 80%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  background-color: #4169e1;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  @media (max-width: 750px) {
+    width: 50px;
+    height: 25px;
+  }
+  hover {
+    opacity: 1;
+  }
+  &:hover .left {
+    transition: all 500ms;
+    height: 100px;
+  }
+  p {
+    color: #4169e1;
+    font-size: 30px;
+    margin-top: 5px;
+    @media (max-width: 750px) {
+      font-size: 18px;
+    }
+  }
+`
+const LanguDrop = styled.div`
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: all 500ms;
+  .left {
+    position: absolute;
+    width: 50%;
+    height: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+  }
+  .right {
+    position: absolute;
+    width: 50%;
+    height: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
   }
 `
