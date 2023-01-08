@@ -1,6 +1,6 @@
 export * from './Layout'
+export * from './SideBar'
 export * from './Icons'
-export * from './Sidebar'
 export * from './Top'
 export * from './AboutMe'
 export * from './Skill'
