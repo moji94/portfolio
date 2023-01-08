@@ -23,11 +23,8 @@ export default function Home() {
   )
 }
 
-export async function getStaticProps({ locale }: any) {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ['common'])),
-      // Will be passed to the page component as props
-    },
-  }
-}
+export const getStaticProps = async ({ locale = 'fa' }) => ({
+  props: {
+    ...(await serverSideTranslations(locale, ['common'])),
+  },
+})
