@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import {
   Css,
   Html,
@@ -17,11 +17,14 @@ import {
   Postgree,
 } from './Icons'
 import { useTranslation } from 'next-i18next'
+import { useAtom } from 'jotai'
+import { pageDirStore } from 'stores/store'
 
 export const Skill = (): JSX.Element => {
+  const [dir, setDir] = useAtom(pageDirStore)
   const { t } = useTranslation('common')
   return (
-    <Container>
+    <Container dir={dir}>
       <Top>
         <Tittle>
           <TittleTop>
@@ -105,6 +108,14 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  ${({ dir }) =>
+    dir === 'rtl'
+      ? css`
+          direction: rtl;
+        `
+      : css`
+          direction: ltr;
+        `}
 `
 const Top = styled.div`
   width: 80%;
@@ -115,6 +126,14 @@ const Tittle = styled.div`
   height: 100%;
   justify-content: flex-start;
   align-items: flex-start;
+  ${({ dir }) =>
+    dir === 'rtl'
+      ? css`
+          margin-right: 30px;
+        `
+      : css`
+          margin-left: 0px;
+        `}
 `
 const TittleTop = styled.div`
   width: 100%;
@@ -147,8 +166,8 @@ const TittleBottom = styled.div`
   }
 `
 const Details = styled.div`
-  width: 70%;
-  height: 300px;
+  width: 80%;
+  height: 250px;
   background-color: #fff;
   border-radius: 40px;
   display: flex;

@@ -1,11 +1,14 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { useTranslation } from 'next-i18next'
+import { useAtom } from 'jotai'
+import { pageDirStore } from 'stores/store'
 
 export const Projects = () => {
+  const [dir, setDir] = useAtom(pageDirStore)
   const { t } = useTranslation('common')
   return (
-    <Container>
+    <Container dir={dir}>
       <Top>
         <Tittle>
           <TittleTop>
@@ -171,9 +174,17 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  ${({ dir }) =>
+    dir === 'rtl'
+      ? css`
+          direction: rtl;
+        `
+      : css`
+          direction: ltr;
+        `}
 `
 const Top = styled.div`
-  width: 70%;
+  width: 80%;
   height: 55px;
 `
 const Tittle = styled.div`
@@ -191,8 +202,8 @@ const TittleTop = styled.div`
   align-items: center;
   div {
     width: 45px;
-    margin-left: 30px;
     border-top: 1.5px solid #333;
+    margin-left: 30px;
   }
   p {
     margin-left: 20px;
@@ -213,7 +224,7 @@ const TittleBottom = styled.div`
   }
 `
 const Details = styled.div`
-  width: 70%;
+  width: 80%;
   height: auto;
   background-color: #fff;
   border-radius: 40px;

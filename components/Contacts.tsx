@@ -1,13 +1,16 @@
 import React, { useState } from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { Github, Instagram, Linkedin, Twitter } from './Icons'
 import { useTranslation } from 'next-i18next'
+import { useAtom } from 'jotai'
+import { pageDirStore } from 'stores/store'
 
 export const Contacts = (): JSX.Element => {
+  const [dir, setDir] = useAtom(pageDirStore)
   const { t } = useTranslation('common')
   const [name, setName] = useState<string>('')
   return (
-    <Container>
+    <Container dir={dir}>
       <Top>
         <Tittle>
           <TittleTop>
@@ -64,9 +67,17 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  ${({ dir }) =>
+    dir === 'rtl'
+      ? css`
+          direction: rtl;
+        `
+      : css`
+          direction: ltr;
+        `}
 `
 const Top = styled.div`
-  width: 70%;
+  width: 80%;
   height: 55px;
 `
 const Tittle = styled.div`
@@ -106,7 +117,7 @@ const TittleBottom = styled.div`
   }
 `
 const Details = styled.div`
-  width: 70%;
+  width: 80%;
   height: 700px;
   background-color: #fff;
   border-radius: 40px;
@@ -131,9 +142,16 @@ const Dtop = styled.div`
 `
 const Pbox = styled.div`
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-right: 50px;
+
   p {
-    font-size: 15px;
+    font-size: 20px;
   }
+
   @media (max-width: 750px) {
     display: flex;
     justify-content: flex-start;
@@ -164,20 +182,27 @@ const Dbot = styled.div`
   align-items: center;
 
   p {
-    font-size: 15px;
-    padding-left: 30px;
+    font-size: 20px;
+    ${({ dir }) =>
+      dir === 'rtl'
+        ? css`
+            padding-right: 30px;
+          `
+        : css`
+            padding-left: 30px;
+          `}
     color: #333;
   }
   button {
-    width: 100px;
-    height: 50px;
+    width: 150px;
+    height: 75px;
     border-radius: 25px;
     background-color: #4169e1;
     display: flex;
     justify-content: center;
     align-items: center;
     border: 2px solid #00f7ff;
-    font-size: 12px;
+    font-size: 18px;
     margin-top: 10px;
     margin-bottom: 10px;
     font-family: 'Vazir';
@@ -186,16 +211,23 @@ const Dbot = styled.div`
 const Inpotbox = styled.div`
   width: 90%;
   height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
   input {
     width: 90%;
     height: 40px;
     margin-bottom: 15px;
     background-color: #fff;
     border: 1px solid #ddd;
-    border-radius: 1px;
+    border-radius: 10px;
     font-size: 12px;
     padding-left: 10px;
+    padding-right: 10px;
     color: #333;
+    font-family: 'Vazir';
   }
 `
 const Single = styled.div`
