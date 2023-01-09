@@ -115,8 +115,6 @@ const Container = styled.div<{
   align-items: center;
   flex-direction: column;
   top: 0;
-  /* right: ${(p) => p.dir === 'rtl' && 0};
-  left: ${(p) => p.dir === 'ltr' && 0}; */
   ${({ dir }) =>
     dir === 'rtl'
       ? css`
