@@ -9,6 +9,7 @@ import {
   Bottom,
   Earth,
 } from 'components/Index'
+import Link from 'next/link'
 
 interface Props {
   change: 'desktop' | 'phone'
@@ -25,11 +26,19 @@ export const Sidebar = ({ change }: Props): JSX.Element => {
       </Namee>
 
       <Langu>
-        <Bottom />
-        <Earth />
+        <div className="raper">
+          <Bottom className="down" />
+          <Earth />
+        </div>
         <LanguDrop className="drop">
-          <div className="left">FA</div>
-          <div className="right">EN</div>
+          <div className="left">
+            <Link href="/" locale="fa" />
+            FA
+          </div>
+          <div className="right">
+            <Link href="/" locale="en" />
+            EN
+          </div>
         </LanguDrop>
       </Langu>
       <Items>
@@ -153,25 +162,23 @@ const Namee = styled.div`
 `
 const Langu = styled.div`
   width: 80%;
-  height: 50px;
+  height: auto;
+  margin-top: 10px;
   display: flex;
-  flex-direction: row;
-  background-color: #4169e1;
+  flex-direction: column;
   border-radius: 10px;
   justify-content: center;
   align-items: center;
+  position: relative;
   cursor: pointer;
   @media (max-width: 750px) {
     width: 50px;
     height: 25px;
   }
-  hover {
-    opacity: 1;
-  }
   &:hover .drop {
-    transition: all 500ms;
-    height: 100px;
+    height: 25px;
     width: 100%;
+    opacity: 1;
   }
   p {
     color: #4169e1;
@@ -181,34 +188,52 @@ const Langu = styled.div`
       font-size: 18px;
     }
   }
+  .raper {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 5px;
+  }
 `
 const LanguDrop = styled.div`
   width: 100%;
-  height: 100px;
+  height: 0px;
+  opacity: 0;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  position: relative;
   transition: all 500ms;
   .left {
-    position: absolute;
-    width: 50%;
+    width: 35%;
     height: 100%;
     left: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: aqua;
+    opacity: 0.8;
+    border-radius: 10px;
+    :hover {
+      opacity: 1;
+      background-color: #255db2;
+    }
   }
   .right {
-    position: absolute;
-    width: 50%;
+    width: 35%;
     height: 100%;
     right: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: red;
+    opacity: 0.8;
+    border-radius: 10px;
+    transition: 300ms;
+    :hover {
+      opacity: 1;
+      background-color: #255db2;
+    }
   }
 `

@@ -588,8 +588,8 @@ export const Earth = (props: SVGProps<SVGSVGElement>): any => (
 export const Bottom = (props: SVGProps<SVGSVGElement>): any => (
   <svg
     fill="#fff"
-    width="20px"
-    height="20px"
+    width="15px"
+    height="15px"
     viewBox="0 0 8 8"
     xmlns="http://www.w3.org/2000/svg"
   >
