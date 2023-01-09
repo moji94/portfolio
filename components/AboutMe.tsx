@@ -1,11 +1,14 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { useTranslation } from 'next-i18next'
+import { useAtom } from 'jotai'
+import { pageDirStore } from 'stores/store'
 
 export const AboutMe = (): JSX.Element => {
+  const [dir, setDir] = useAtom(pageDirStore)
   const { t } = useTranslation('common')
   return (
-    <Container>
+    <Container dir={dir}>
       <Top>
         <Tittle>
           <TittleTop>
@@ -33,6 +36,14 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  ${({ dir }) =>
+    dir === 'rtl'
+      ? css`
+          direction: rtl;
+        `
+      : css`
+          direction: ltr;
+        `}
   @media (max-width: 750px) {
   }
 `
@@ -56,7 +67,14 @@ const TittleTop = styled.div`
   div {
     width: 45px;
     border-top: 1.5px solid #333;
-    margin-left: 30px;
+    ${({ dir }) =>
+      dir === 'rtl'
+        ? css`
+            margin-right: 30px;
+          `
+        : css`
+            margin-left: 30px;
+          `}
     @media (max-width: 750px) {
       margin-left: 20;
     }
