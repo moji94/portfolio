@@ -8,7 +8,7 @@ import {
   Contacts,
   Footer,
   Projects,
-} from '@components'
+} from 'components/Index'
 
 export default function Home() {
   return (

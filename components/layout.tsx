@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Head from 'next/head'
 import styled from 'styled-components'
-import { Menu, Sidebar } from '@components'
+import { Menu, Sidebar } from 'components/Index'
 
 interface Props {
   children?: any

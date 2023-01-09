@@ -1,6 +1,14 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { Home, About, Skills, Work, Contact, Bottom, Earth } from '@components'
+import {
+  Home,
+  About,
+  Skills,
+  Work,
+  Contact,
+  Bottom,
+  Earth,
+} from 'components/Index'
 
 interface Props {
   change: 'desktop' | 'phone'
@@ -19,11 +27,11 @@ export const Sidebar = ({ change }: Props): JSX.Element => {
       <Langu>
         <Bottom />
         <Earth />
+        <LanguDrop className="drop">
+          <div className="left">FA</div>
+          <div className="right">EN</div>
+        </LanguDrop>
       </Langu>
-      <LanguDrop>
-        <div className="left">FA</div>
-        <div className="right">EN</div>
-      </LanguDrop>
       <Items>
         <SingleItem
           onClick={() => {
@@ -160,9 +168,10 @@ const Langu = styled.div`
   hover {
     opacity: 1;
   }
-  &:hover .left {
+  &:hover .drop {
     transition: all 500ms;
     height: 100px;
+    width: 100%;
   }
   p {
     color: #4169e1;
@@ -185,7 +194,7 @@ const LanguDrop = styled.div`
   .left {
     position: absolute;
     width: 50%;
-    height: 0;
+    height: 100%;
     left: 0;
     display: flex;
     justify-content: center;
@@ -195,7 +204,7 @@ const LanguDrop = styled.div`
   .right {
     position: absolute;
     width: 50%;
-    height: 0;
+    height: 100%;
     right: 0;
     display: flex;
     justify-content: center;
