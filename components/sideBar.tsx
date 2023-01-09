@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import styled, { css } from 'styled-components'
+import { useTranslation } from 'next-i18next'
 import {
   Home,
   About,
@@ -19,6 +20,7 @@ interface Props {
 
 export const Sidebar = ({ change }: Props): JSX.Element => {
   const [dir, setDir] = useAtom(pageDirStore)
+  const { t } = useTranslation('common')
   const scroll = (y: number) => {
     document.documentElement.scrollTop = document.body.scrollTop = y
   }
@@ -63,7 +65,7 @@ export const Sidebar = ({ change }: Props): JSX.Element => {
           }}
         >
           <Home />
-          <p className="pp">HOME </p>
+          <p className="pp">{t('home')}</p>
         </SingleItem>
         <SingleItem
           onClick={() => {
@@ -71,7 +73,7 @@ export const Sidebar = ({ change }: Props): JSX.Element => {
           }}
         >
           <About />
-          <p className="pp">ABOUT </p>
+          <p className="pp">{t('about')} </p>
         </SingleItem>
         <SingleItem
           onClick={() => {
@@ -79,7 +81,7 @@ export const Sidebar = ({ change }: Props): JSX.Element => {
           }}
         >
           <Skills />
-          <p className="pp"> SKILLS </p>
+          <p className="pp">{t('skills')}</p>
         </SingleItem>
         <SingleItem
           onClick={() => {
@@ -87,7 +89,7 @@ export const Sidebar = ({ change }: Props): JSX.Element => {
           }}
         >
           <Work />
-          <p className="pp">WORK </p>
+          <p className="pp">{t('work')}</p>
         </SingleItem>
         <SingleItem
           onClick={() => {
@@ -95,7 +97,7 @@ export const Sidebar = ({ change }: Props): JSX.Element => {
           }}
         >
           <Contact />
-          <p className="pp"> CONTACT</p>
+          <p className="pp">{t('contact')}</p>
         </SingleItem>
       </Items>
     </Container>
@@ -106,7 +108,7 @@ const Container = styled.div<{
   change: 'desktop' | 'phone'
   dir: 'rtl' | 'ltr'
 }>`
-  width: 70px;
+  width: 80px;
   height: 100vh;
   position: fixed;
   display: flex;
@@ -126,7 +128,7 @@ const Container = styled.div<{
   color: #ccc;
   transition: all 500ms;
   :hover {
-    width: 130px;
+    width: 140px;
   }
   &:hover .pp {
     transition: all 500ms;
@@ -158,10 +160,10 @@ const Items = styled.ul`
         `}
 `
 const SingleItem = styled.li<any>`
-  width: 90px;
+  width: 100px;
   height: 40px;
   display: flex;
-  margin-top: 2px;
+  margin-top: 15px;
   flex-direction: row;
   color: #ccc;
   font-size: 20px;
@@ -176,7 +178,7 @@ const SingleItem = styled.li<any>`
   }
   p {
     opacity: 0;
-    font-size: 10px;
+    font-size: 13px;
     margin-left: 5px;
   }
 `

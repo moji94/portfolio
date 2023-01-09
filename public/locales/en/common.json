@@ -20,5 +20,9 @@
   "femail": "Your Email*",
   "fsobject": "Subject*",
   "fmessage": "Your Message*",
-  "send": "SEND"
+  "send": "SEND",
+  "home": "HOME",
+  "about": "ABOUT",
+  "work": "WORK",
+  "skills": "SKILLS"
 }
