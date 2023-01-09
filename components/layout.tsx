@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Head from 'next/head'
 import styled from 'styled-components'
 import { Menu, Sidebar } from 'components/Index'
@@ -7,16 +7,18 @@ interface Props {
   children?: any
   title: string
 }
+
 export const Layout = ({ children, title }: Props): JSX.Element => {
   const [change, setChange] = useState<'desktop' | 'phone'>('desktop')
+
   const handleclick = () => {
     if (change == 'desktop') {
       setChange('phone')
     } else {
       setChange('desktop')
     }
-    console.log(change)
   }
+
   return (
     <div>
       <Head>

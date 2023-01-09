@@ -44,10 +44,10 @@ export const Contacts = (): JSX.Element => {
             <p>{t('form')}</p>
           </Pbox>
           <Inpotbox>
-            <input placeholder="Your Name*" />
-            <input placeholder="Your Email*" />
-            <input placeholder="Subject*" />
-            <input placeholder="$`{t('fmessage')}`" />
+            <input placeholder={`${t('fname')}`} />
+            <input placeholder={`${t('femail')}`} />
+            <input placeholder={`${t('fsobject')}`} />
+            <input placeholder={`${t('fmessage')}`} />
           </Inpotbox>
           <button>{t('send')}</button>
         </Dbot>

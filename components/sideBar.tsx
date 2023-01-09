@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import {
   Home,
   About,
@@ -10,17 +10,20 @@ import {
   Earth,
 } from 'components/Index'
 import Link from 'next/link'
+import { useAtom } from 'jotai'
+import { pageDirStore } from 'stores/store'
 
 interface Props {
   change: 'desktop' | 'phone'
 }
 
 export const Sidebar = ({ change }: Props): JSX.Element => {
+  const [dir, setDir] = useAtom(pageDirStore)
   const scroll = (y: number) => {
     document.documentElement.scrollTop = document.body.scrollTop = y
   }
   return (
-    <Container change={change}>
+    <Container change={change} dir={dir}>
       <Namee>
         <p>MBZ</p>
       </Namee>
@@ -31,13 +34,25 @@ export const Sidebar = ({ change }: Props): JSX.Element => {
           <Earth />
         </div>
         <LanguDrop className="drop">
-          <div className="left">
-            <Link href="/" locale="fa" />
-            FA
+          <div
+            className="left"
+            onClick={() => {
+              setDir('rtl')
+            }}
+          >
+            <Link href="/" locale="fa">
+              FA
+            </Link>
           </div>
-          <div className="right">
-            <Link href="/" locale="en" />
-            EN
+          <div
+            className="right"
+            onClick={() => {
+              setDir('ltr')
+            }}
+          >
+            <Link href="/" locale="en">
+              EN
+            </Link>
           </div>
         </LanguDrop>
       </Langu>
@@ -87,7 +102,10 @@ export const Sidebar = ({ change }: Props): JSX.Element => {
   )
 }
 
-const Container = styled.div<{ change: 'desktop' | 'phone' }>`
+const Container = styled.div<{
+  change: 'desktop' | 'phone'
+  dir: 'rtl' | 'ltr'
+}>`
   width: 70px;
   height: 100vh;
   position: fixed;
@@ -97,7 +115,16 @@ const Container = styled.div<{ change: 'desktop' | 'phone' }>`
   align-items: center;
   flex-direction: column;
   top: 0;
-  left: 0;
+  /* right: ${(p) => p.dir === 'rtl' && 0};
+  left: ${(p) => p.dir === 'ltr' && 0}; */
+  ${({ dir }) =>
+    dir === 'rtl'
+      ? css`
+          right: 0;
+        `
+      : css`
+          left: 0;
+        `}
   color: #ccc;
   transition: all 500ms;
   :hover {
@@ -118,11 +145,19 @@ const Items = styled.ul`
   background-color: #4169e1;
   flex-direction: column;
   display: flex;
-  padding-left: 20px;
   justify-content: center;
   align-items: flex-start;
   list-style-type: none;
   padding-bottom: 110px;
+  padding-right: 20px;
+  ${({ dir }) =>
+    dir === 'rtl'
+      ? css`
+          padding-right: 20px;
+        `
+      : css`
+          padding-left: 20px;
+        `}
 `
 const SingleItem = styled.li<any>`
   width: 90px;
@@ -194,7 +229,7 @@ const Langu = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     padding-bottom: 5px;
   }
 `

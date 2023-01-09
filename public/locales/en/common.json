@@ -19,6 +19,6 @@
   "fname": "Your Name*",
   "femail": "Your Email*",
   "fsobject": "Subject*",
-  "fmessage": "{{Your Message*}}",
+  "fmessage": "Your Message*",
   "send": "SEND"
 }

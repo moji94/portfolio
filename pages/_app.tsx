@@ -1,3 +1,4 @@
+import { Provider } from 'jotai'
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import { createGlobalStyle } from 'styled-components'
@@ -6,10 +7,10 @@ import { appWithTranslation } from 'next-i18next'
 
 const App = ({ Component, pageProps }: AppProps) => {
   return (
-    <>
+    <Provider>
       <GlobalStyle />
       <Component {...pageProps} />
-    </>
+    </Provider>
   )
 }
 
@@ -23,6 +24,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: Vazir !important;
     .swal2-styled {
       font-family: Vazir !important;
+
     }
   }
   .swal2-confirm {
