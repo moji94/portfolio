@@ -31,7 +31,7 @@ export const Projects = () => {
             />
           </Pic>
           <Text>
-            <h2>Belderchin</h2>
+            <h2>{t('belderchin')}</h2>
             <p>
               Technologies Used: React, REST API, ChartJS Completely built with
               hooks and functional components Emulates time passage, and stock
@@ -51,7 +51,7 @@ export const Projects = () => {
             />
           </Pic>
           <Text>
-            <h2>Golden Cloud</h2>
+            <h2>{t('goldencloud')}</h2>
             <p>
               Technologies Used: React, REST API, ChartJS Completely built with
               hooks and functional components Emulates time passage, and stock
@@ -71,7 +71,7 @@ export const Projects = () => {
             />
           </Pic>
           <Text>
-            <h2>Mehan Trade</h2>
+            <h2>{t('mehantrade')}</h2>
             <p>
               Technologies Used: React, REST API, ChartJS Completely built with
               hooks and functional components Emulates time passage, and stock
@@ -91,7 +91,7 @@ export const Projects = () => {
             />
           </Pic>
           <Text>
-            <h2>Salom Ba</h2>
+            <h2>{t('salomba')}</h2>
             <p>
               Technologies Used: React, REST API, ChartJS Completely built with
               hooks and functional components Emulates time passage, and stock
@@ -111,7 +111,7 @@ export const Projects = () => {
             />
           </Pic>
           <Text>
-            <h2>Patcher</h2>
+            <h2>{t('patcher')}</h2>
             <p>
               Technologies Used: React, REST API, ChartJS Completely built with
               hooks and functional components Emulates time passage, and stock
@@ -131,7 +131,7 @@ export const Projects = () => {
             />
           </Pic>
           <Text>
-            <h2>Dez Live</h2>
+            <h2>{t('dezlive')}</h2>
             <p>
               Technologies Used: React, REST API, ChartJS Completely built with
               hooks and functional components Emulates time passage, and stock
@@ -151,7 +151,7 @@ export const Projects = () => {
             />
           </Pic>
           <Text>
-            <h2>Force Game</h2>
+            <h2>{t('forcegame')}</h2>
             <p>
               Technologies Used: React, REST API, ChartJS Completely built with
               hooks and functional components Emulates time passage, and stock
@@ -285,7 +285,7 @@ const Text = styled.div`
     }
   }
   p {
-    font-size: 12px;
+    font-size: 15px;
     @media (max-width: 850px) {
       text-align: center;
     }
