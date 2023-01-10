@@ -198,9 +198,15 @@ const Dbot = styled.div`
       dir === 'rtl'
         ? css`
             padding-right: 30px;
+            @media (max-width: 400px;) {
+              padding-right: 10px;
+            }
           `
         : css`
             padding-left: 30px;
+            @media (max-width: 400px;) {
+              padding-left: 10px;
+            }
           `}
     color: #333;
   }

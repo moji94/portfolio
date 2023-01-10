@@ -15,8 +15,6 @@ export const Top = (): JSX.Element => {
             src={'/images/personal.jpg'}
             alt={'its Mojtaba bahadori Zadeh'}
             className={'boom'}
-            // width="350"
-            // height="350"
           />
         </div>
       </Imagee>
@@ -58,6 +56,7 @@ const Container = styled.div`
     flex-direction: column;
     height: 450px;
     padding-top: 30px;
+    margin-bottom: 50px;
   }
 `
 
@@ -74,20 +73,19 @@ const Imagee = styled.div`
     border-radius: 50%;
     margin-right: 50px;
     box-shadow: 10px 0 #73a8fe, 20px 0 #92bcff, 30px 0 #c2dcff;
-    z-index: 1;
     img {
       border-radius: 50%;
       width: 350px;
       height: 350px;
       @media (max-width: 850px) {
-        width: 275px;
-        height: 275px;
+        width: 200px;
+        height: 200px;
       }
     }
     @media (max-width: 850px) {
       margin-right: 0;
-      width: 275px;
-      height: 275px;
+      width: 200px;
+      height: 200px;
     }
   }
   @media (max-width: 850px) {
@@ -110,10 +108,22 @@ const Details = styled.div`
     text-align: center;
     display: flex;
     flex-direction: row;
+    @media (max-width: 800px) {
+      font-size: 25px;
+    }
+    @media (max-width: 400px) {
+      font-size: 19.5px;
+    }
     p {
-      margin: 10px;
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-top: 10px;
       font-size: 15px;
       color: #333;
+      text-align: center;
+      @media (max-width: 400px) {
+        margin-top: 3px;
+      }
     }
   }
   .title {

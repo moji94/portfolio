@@ -116,6 +116,9 @@ const Container = styled.div`
       : css`
           direction: ltr;
         `}
+  @media (max-width: 400px) {
+    margin-top: 50px;
+  }
 `
 const Top = styled.div`
   width: 80%;
@@ -178,6 +181,9 @@ const Details = styled.div`
   margin-top: 30px;
   padding-left: 20px;
   padding-right: 20px;
+  @media (max-width: 400px) {
+    height: 375px;
+  }
 `
 const Single = styled.div`
   width: 70px;

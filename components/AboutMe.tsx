@@ -44,7 +44,8 @@ const Container = styled.div`
       : css`
           direction: ltr;
         `}
-  @media (max-width: 850px) {
+  @media (max-width: 400px) {
+    margin-top: 50px;
   }
 `
 const Top = styled.div`
@@ -111,6 +112,7 @@ const Bottom = styled.div`
 `
 const Details = styled.div`
   width: 100%;
+  min-width: 300px;
   height: 200px;
   background-color: #fff;
   border-radius: 40px;
