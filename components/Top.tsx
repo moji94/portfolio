@@ -29,7 +29,7 @@ export const Top = (): JSX.Element => {
         </h1>
         <p className="intro">{t('me')}</p>
         <div>
-          <a href="/images/86.jpg">
+          <a href="/documents/Mojtaba BahadoriZadeh.pdf">
             <button>{t('resome')}</button>
           </a>
         </div>
