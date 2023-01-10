@@ -199,7 +199,7 @@ const Single = styled.div`
     box-shadow: 4px 4px 4px 4px #eee;
     p {
       font-size: 15px;
-      @media (max-width: 750px) {
+      @media (max-width: 850px) {
         font-size: 10px;
       }
     }
@@ -209,11 +209,11 @@ const Single = styled.div`
     color: #333;
     transition: all 500ms;
     margin-top: 5px;
-    @media (max-width: 750px) {
+    @media (max-width: 850px) {
       font-size: 8px;
     }
   }
-  @media (max-width: 750px) {
+  @media (max-width: 850px) {
     width: 50px;
     height: 50px;
     :hover {

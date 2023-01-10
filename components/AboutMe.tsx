@@ -44,7 +44,7 @@ const Container = styled.div`
       : css`
           direction: ltr;
         `}
-  @media (max-width: 750px) {
+  @media (max-width: 850px) {
   }
 `
 const Top = styled.div`
@@ -75,7 +75,7 @@ const TittleTop = styled.div`
         : css`
             margin-left: 30px;
           `}
-    @media (max-width: 750px) {
+    @media (max-width: 850px) {
       margin-left: 20;
     }
   }
@@ -104,7 +104,7 @@ const Bottom = styled.div`
   justify-content: center;
   align-items: flex-start;
   padding: 30px;
-  @media (max-width: 750px) {
+  @media (max-width: 850px) {
     width: 80%;
     height: auto;
   }
@@ -119,14 +119,14 @@ const Details = styled.div`
   align-items: center;
   padding-left: 10px;
   padding-right: 10px;
-  @media (max-width: 750px) {
+  @media (max-width: 850px) {
     height: auto;
     padding-left: 0px;
     padding-right: 0px;
   }
   p {
     color: #333;
-    font-size: 13px;
+    font-size: 16px;
     padding: 30px;
   }
 `

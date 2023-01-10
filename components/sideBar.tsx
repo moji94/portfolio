@@ -134,7 +134,7 @@ const Container = styled.div<{
     transition: all 500ms;
     opacity: 1;
   }
-  @media (max-width: 750px) {
+  @media (max-width: 850px) {
     display: ${(d) => (d.change === 'phone' ? 'inline-block' : 'none')};
   }
 `
@@ -164,11 +164,13 @@ const SingleItem = styled.li<any>`
   height: 40px;
   display: flex;
   margin-top: 15px;
+  padding-left: 2px;
+  padding-right: 2px;
   flex-direction: row;
   color: #ccc;
   font-size: 20px;
   border-radius: 5px;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   transition: all 500ms;
   :hover {
@@ -206,7 +208,7 @@ const Langu = styled.div`
   align-items: center;
   position: relative;
   cursor: pointer;
-  @media (max-width: 750px) {
+  @media (max-width: 850px) {
     width: 50px;
     height: 25px;
   }
@@ -219,7 +221,7 @@ const Langu = styled.div`
     color: #4169e1;
     font-size: 30px;
     margin-top: 5px;
-    @media (max-width: 750px) {
+    @media (max-width: 850px) {
       font-size: 18px;
     }
   }

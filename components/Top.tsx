@@ -14,18 +14,19 @@ export const Top = (): JSX.Element => {
           <img
             src={'/images/personal.jpg'}
             alt={'its Mojtaba bahadori Zadeh'}
-            width="250"
-            height="250"
+            className={'boom'}
+            // width="350"
+            // height="350"
           />
         </div>
       </Imagee>
       <Details>
         <p className="title">{t('hi')}</p>
-        <h2>
+        <h1>
           <p>{t('i')}</p>
           {t('name')}
           <p>{t('am')}</p>
-        </h2>
+        </h1>
         <p className="intro">{t('me')}</p>
         <div>
           <a href="/images/86.jpg">
@@ -53,7 +54,7 @@ const Container = styled.div`
         `}
   justify-content: center;
   align-items: center;
-  @media (max-width: 750px) {
+  @media (max-width: 850px) {
     flex-direction: column;
     height: 450px;
     padding-top: 30px;
@@ -68,20 +69,28 @@ const Imagee = styled.div`
   justify-content: flex-end;
   align-items: center;
   div {
-    width: 250px;
-    height: 250px;
+    width: 350px;
+    height: 350px;
     border-radius: 50%;
     margin-right: 50px;
     box-shadow: 10px 0 #73a8fe, 20px 0 #92bcff, 30px 0 #c2dcff;
     z-index: 1;
     img {
       border-radius: 50%;
+      width: 350px;
+      height: 350px;
+      @media (max-width: 850px) {
+        width: 275px;
+        height: 275px;
+      }
     }
-    @media (max-width: 750px) {
+    @media (max-width: 850px) {
       margin-right: 0;
+      width: 275px;
+      height: 275px;
     }
   }
-  @media (max-width: 750px) {
+  @media (max-width: 850px) {
     flex-direction: column;
     width: 50%;
     justify-content: center;
@@ -96,27 +105,27 @@ const Details = styled.div`
   align-items: flex-start;
   padding-left: 20px;
   padding-right: 100px;
-  h2 {
+  h1 {
     color: #4169e1;
     text-align: center;
     display: flex;
     flex-direction: row;
     p {
       margin: 10px;
-      font-size: 12px;
+      font-size: 15px;
       color: #333;
     }
   }
   .title {
     margin-top: 30px;
-    font-size: 12px;
+    font-size: 15px;
     color: #333;
   }
   .intro {
     margin-top: 10px;
-    font-size: 12px;
+    font-size: 15px;
     color: #333;
-    @media (max-width: 750px) {
+    @media (max-width: 850px) {
       text-align: center;
       margin-top: 0;
     }
@@ -140,12 +149,12 @@ const Details = styled.div`
       font-size: 12px;
       font-family: 'Vazir';
     }
-    @media (max-width: 750px) {
+    @media (max-width: 850px) {
       justify-content: center;
       align-items: flex-start;
     }
   }
-  @media (max-width: 750px) {
+  @media (max-width: 850px) {
     align-items: center;
     justify-content: flex-start;
     width: 75%;

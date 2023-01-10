@@ -234,7 +234,7 @@ const Details = styled.div`
   align-items: center;
   margin-top: 30px;
   padding-top: 30px;
-  @media (max-width: 750px) {
+  @media (max-width: 850px) {
     width: 90%;
   }
 `
@@ -249,7 +249,7 @@ const Box = styled.div`
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
-  @media (max-width: 750px) {
+  @media (max-width: 850px) {
     width: 90%;
     height: 350px;
     flex-direction: column;
@@ -265,7 +265,7 @@ const Pic = styled.div`
   img {
     border-radius: 25px;
   }
-  @media (max-width: 750px) {
+  @media (max-width: 850px) {
     margin-top: 10px;
   }
 `
@@ -280,17 +280,17 @@ const Text = styled.div`
   color: #333;
   h2 {
     margin-bottom: 30px;
-    @media (max-width: 750px) {
+    @media (max-width: 850px) {
       margin-bottom: 10px;
     }
   }
   p {
     font-size: 12px;
-    @media (max-width: 750px) {
+    @media (max-width: 850px) {
       text-align: center;
     }
   }
-  @media (max-width: 750px) {
+  @media (max-width: 850px) {
     width: 90%;
     height: 350px;
   }

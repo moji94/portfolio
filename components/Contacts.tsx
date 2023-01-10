@@ -152,7 +152,7 @@ const Pbox = styled.div`
     font-size: 20px;
   }
 
-  @media (max-width: 750px) {
+  @media (max-width: 850px) {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -247,10 +247,10 @@ const Single = styled.div`
     width: 60px;
     height: 60px;
     box-shadow: 2px 2px 2px 2px #eee;
-    @media (max-width: 750px) {
+    @media (max-width: 850px) {
     }
   }
-  @media (max-width: 750px) {
+  @media (max-width: 850px) {
     width: 40px;
     height: 40px;
     margin-left: 8px;

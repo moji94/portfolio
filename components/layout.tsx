@@ -65,7 +65,7 @@ const Menuu = styled.div`
   :hover {
     cursor: pointer;
   }
-  @media (max-width: 750px) {
+  @media (max-width: 850px) {
     display: flex;
     justify-content: center;
     align-items: center;
