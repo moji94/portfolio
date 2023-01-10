@@ -4,6 +4,7 @@ import { Github, Instagram, Linkedin, Twitter } from './Icons'
 import { useTranslation } from 'next-i18next'
 import { useAtom } from 'jotai'
 import { pageDirStore } from 'stores/store'
+import Link from 'next/link'
 
 export const Contacts = (): JSX.Element => {
   const [dir, setDir] = useAtom(pageDirStore)
@@ -29,16 +30,26 @@ export const Contacts = (): JSX.Element => {
           </Pbox>
           <Subd>
             <Single>
-              <Linkedin />
+              <Link
+                href={'https://www.linkedin.com/in/mojtaba-bahadori-zadeh/'}
+              >
+                <Linkedin />
+              </Link>
             </Single>
             <Single>
-              <Instagram />
+              <Link href={'https://www.instagram.com/mojtaba_bahadori_zadeh/'}>
+                <Instagram />
+              </Link>
             </Single>
             <Single>
-              <Twitter />
+              <Link href={'https://twitter.com/@MBahadoriZ94'}>
+                <Twitter />
+              </Link>
             </Single>
             <Single>
-              <Github />
+              <Link href={'https://github.com/moji94'}>
+                <Github />
+              </Link>
             </Single>
           </Subd>
         </Dtop>
