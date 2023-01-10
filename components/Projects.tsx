@@ -24,9 +24,29 @@ export const Projects = () => {
         <Box>
           <Pic>
             <img
+              src={'/images/KhuzLand.png'}
+              alt={'khuzland'}
+              width="175"
+              height="200"
+            />
+          </Pic>
+          <Text>
+            <h2>{t('khuzland')}</h2>
+            <p>
+              Technologies Used: React, REST API, ChartJS Completely built with
+              hooks and functional components Emulates time passage, and stock
+              prices update randomly as each "day" passes Real-time updates on
+              stock and portfolio performance, visualized with interactive
+              charts
+            </p>
+          </Text>
+        </Box>
+        <Box>
+          <Pic>
+            <img
               src={'/images/belderchin.png'}
               alt={'belderchin'}
-              width="200"
+              width="175"
               height="200"
             />
           </Pic>
@@ -46,7 +66,7 @@ export const Projects = () => {
             <img
               src={'/images/GoldenCloud.png'}
               alt={'GoldenCloud'}
-              width="200"
+              width="175"
               height="200"
             />
           </Pic>
@@ -86,7 +106,7 @@ export const Projects = () => {
             <img
               src={'/images/salomba.png'}
               alt={'salomba'}
-              width="200"
+              width="220"
               height="200"
             />
           </Pic>
@@ -106,7 +126,7 @@ export const Projects = () => {
             <img
               src={'/images/patcher.png'}
               alt={'patcher'}
-              width="200"
+              width="220"
               height="200"
             />
           </Pic>
@@ -126,7 +146,7 @@ export const Projects = () => {
             <img
               src={'/images/dezlive.png'}
               alt={'dezlive'}
-              width="200"
+              width="175"
               height="200"
             />
           </Pic>
@@ -146,7 +166,7 @@ export const Projects = () => {
             <img
               src={'/images/forcegame.png'}
               alt={'forcegame'}
-              width="200"
+              width="190"
               height="200"
             />
           </Pic>
