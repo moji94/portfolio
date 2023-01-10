@@ -208,10 +208,6 @@ const Langu = styled.div`
   align-items: center;
   position: relative;
   cursor: pointer;
-  @media (max-width: 850px) {
-    width: 50px;
-    height: 25px;
-  }
   &:hover .drop {
     height: 25px;
     width: 100%;

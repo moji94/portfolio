@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import Head from 'next/head'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { Menu, Sidebar } from 'components/Index'
+import { useAtom } from 'jotai'
+import { pageDirStore } from 'stores/store'
 
 interface Props {
   children?: any
@@ -10,7 +12,7 @@ interface Props {
 
 export const Layout = ({ children, title }: Props): JSX.Element => {
   const [change, setChange] = useState<'desktop' | 'phone'>('desktop')
-
+  const [dir, setDir] = useAtom(pageDirStore)
   const handleclick = () => {
     if (change == 'desktop') {
       setChange('phone')
@@ -24,7 +26,7 @@ export const Layout = ({ children, title }: Props): JSX.Element => {
       <Head>
         <title>{title}</title>
       </Head>
-      <Container>
+      <Container dir={dir}>
         <Menuu
           onClick={() => {
             handleclick()
@@ -60,8 +62,15 @@ const Menuu = styled.div`
   height: 50px;
   position: fixed;
   top: 5px;
-  right: 5px;
   display: none;
+  ${({ dir }) =>
+    dir === 'rtl'
+      ? css`
+          right: 5px;
+        `
+      : css`
+          left: 5px;
+        `}
   :hover {
     cursor: pointer;
   }
