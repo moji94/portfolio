@@ -32,13 +32,7 @@ export const Projects = () => {
           </Pic>
           <Text>
             <h2>{t('khuzland')}</h2>
-            <p>
-              Technologies Used: React, REST API, ChartJS Completely built with
-              hooks and functional components Emulates time passage, and stock
-              prices update randomly as each "day" passes Real-time updates on
-              stock and portfolio performance, visualized with interactive
-              charts
-            </p>
+            <p>{t('khuzlands')}</p>
           </Text>
         </Box>
         <Box>
@@ -52,13 +46,7 @@ export const Projects = () => {
           </Pic>
           <Text>
             <h2>{t('belderchin')}</h2>
-            <p>
-              Technologies Used: React, REST API, ChartJS Completely built with
-              hooks and functional components Emulates time passage, and stock
-              prices update randomly as each "day" passes Real-time updates on
-              stock and portfolio performance, visualized with interactive
-              charts
-            </p>
+            <p>{t('belderchins')}</p>
           </Text>
         </Box>
         <Box>
@@ -72,13 +60,7 @@ export const Projects = () => {
           </Pic>
           <Text>
             <h2>{t('goldencloud')}</h2>
-            <p>
-              Technologies Used: React, REST API, ChartJS Completely built with
-              hooks and functional components Emulates time passage, and stock
-              prices update randomly as each "day" passes Real-time updates on
-              stock and portfolio performance, visualized with interactive
-              charts
-            </p>
+            <p>{t('goldenclouds')}</p>
           </Text>
         </Box>
         <Box>
@@ -92,13 +74,7 @@ export const Projects = () => {
           </Pic>
           <Text>
             <h2>{t('mehantrade')}</h2>
-            <p>
-              Technologies Used: React, REST API, ChartJS Completely built with
-              hooks and functional components Emulates time passage, and stock
-              prices update randomly as each "day" passes Real-time updates on
-              stock and portfolio performance, visualized with interactive
-              charts
-            </p>
+            <p>{t('mehantrades')}</p>
           </Text>
         </Box>
         <Box>
@@ -112,13 +88,7 @@ export const Projects = () => {
           </Pic>
           <Text>
             <h2>{t('salomba')}</h2>
-            <p>
-              Technologies Used: React, REST API, ChartJS Completely built with
-              hooks and functional components Emulates time passage, and stock
-              prices update randomly as each "day" passes Real-time updates on
-              stock and portfolio performance, visualized with interactive
-              charts
-            </p>
+            <p>{t('salombas')}</p>
           </Text>
         </Box>
         <Box>
@@ -132,13 +102,7 @@ export const Projects = () => {
           </Pic>
           <Text>
             <h2>{t('patcher')}</h2>
-            <p>
-              Technologies Used: React, REST API, ChartJS Completely built with
-              hooks and functional components Emulates time passage, and stock
-              prices update randomly as each "day" passes Real-time updates on
-              stock and portfolio performance, visualized with interactive
-              charts
-            </p>
+            <p>{t('patchers')}</p>
           </Text>
         </Box>
         <Box>
@@ -152,13 +116,7 @@ export const Projects = () => {
           </Pic>
           <Text>
             <h2>{t('dezlive')}</h2>
-            <p>
-              Technologies Used: React, REST API, ChartJS Completely built with
-              hooks and functional components Emulates time passage, and stock
-              prices update randomly as each "day" passes Real-time updates on
-              stock and portfolio performance, visualized with interactive
-              charts
-            </p>
+            <p>{t('dezlives')}</p>
           </Text>
         </Box>
         <Box>
@@ -172,13 +130,7 @@ export const Projects = () => {
           </Pic>
           <Text>
             <h2>{t('forcegame')}</h2>
-            <p>
-              Technologies Used: React, REST API, ChartJS Completely built with
-              hooks and functional components Emulates time passage, and stock
-              prices update randomly as each "day" passes Real-time updates on
-              stock and portfolio performance, visualized with interactive
-              charts
-            </p>
+            <p>{t('forcegames')}</p>
           </Text>
         </Box>
       </Details>

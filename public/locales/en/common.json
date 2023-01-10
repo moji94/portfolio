@@ -26,11 +26,19 @@
   "work": "WORK",
   "skills": "SKILLS",
   "belderchin": "BeldDez",
+  "belderchins": "The introduction website of the quail breeding company",
   "goldencloud": "Golden Cloud",
+  "goldenclouds": "Cloud supply website",
   "mehantrade": "Mehan Trade",
+  "mehantrades": "Digital currency trading and conversion website",
   "salomba": "Salom Ba",
+  "salombas": "An application in the field of digital health",
   "patcher": "Patcher",
+  "patchers": "A website in the field of games",
   "dezlive": "DezLive",
+  "dezlives": "Dezful city live broadcasting site",
   "forcegame": "Force Game",
-  "khuzland": "KhuzLand"
+  "forcegames": "A website in the field of games",
+  "khuzland": "KhuzLand",
+  "khuzlands": "An application in the field of tourism based on React Native"
 }
