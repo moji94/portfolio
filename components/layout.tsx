@@ -28,6 +28,7 @@ export const Layout = ({ children, title }: Props): JSX.Element => {
       </Head>
       <Container dir={dir}>
         <Menuu
+          dir={dir}
           onClick={() => {
             handleclick()
           }}
@@ -63,13 +64,14 @@ const Menuu = styled.div`
   position: fixed;
   top: 5px;
   display: none;
+  right: 5px;
   ${({ dir }) =>
     dir === 'rtl'
       ? css`
-          right: 5px;
+          left: 5px;
         `
       : css`
-          left: 5px;
+          right: 5px;
         `}
   :hover {
     cursor: pointer;
